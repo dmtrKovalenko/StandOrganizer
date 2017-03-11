@@ -3,3 +3,4 @@ bin/
 obj/
 .vs/
 bin
+StandOrganizer.Api/StandOrganizer.Api/App_Data/

@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EF\ApplicationDBContext.cs" />
+    <Compile Include="EF\MyContextFactory.cs" />
+    <Compile Include="Migrations\201703112042235_Initial.cs" />
+    <Compile Include="Migrations\201703112042235_Initial.Designer.cs">
+      <DependentUpon>201703112042235_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\Stand.cs" />
@@ -60,6 +66,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703112042235_Initial.resx">
+      <DependentUpon>201703112042235_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
