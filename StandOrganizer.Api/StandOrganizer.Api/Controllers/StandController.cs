@@ -1,28 +1,24 @@
 ﻿using StandOrginizer.BL.Interfaces;
 using StandOrginizer.BL.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace StandOrganizer.Api.Controllers
 {
     public class StandController : ApiController
     {
-        private IServiceManager serviceManager { get; set; }
+        private readonly IStandManager standManager;
 
-        public StandController(IServiceManager serviceManager)
+        public StandController(IStandManager standManager)
         {
-            this.serviceManager = serviceManager;
+            this.standManager = standManager;
         }
 
-        public IEnumerable<ServiceViewModel> GetServices()
+        public IEnumerable<StandViewModel> GetStands()
         {
-            var services = this.serviceManager.GetAllServices();
+            var stands = this.standManager.GetAllServices();
 
-            return services;
+            return stands;
         }
     }
 }

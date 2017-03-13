@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace StandOrginizer.BL.Interfaces
 {
-    public interface IServiceManager
+    public interface IStandManager
     {
-        IEnumerable<ServiceViewModel> GetAllServices();
+        IEnumerable<StandViewModel> GetAllServices();
     }
 }

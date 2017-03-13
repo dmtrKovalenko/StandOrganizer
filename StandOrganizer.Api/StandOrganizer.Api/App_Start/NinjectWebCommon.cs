@@ -71,6 +71,7 @@ namespace StandOrganizer.Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IStandManager>().To<StandManager>();
             kernel.Bind<IServiceManager>().To<ServiceManager>();
         }        
     }
