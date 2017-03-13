@@ -7,6 +7,7 @@ namespace StandOrganizer.DAL.Models
         public DbSet<Stand> Stands { get; set; }
         public DbSet<Service> Services { get; set; }
 
-        public ApplicationDBContext(string connectionString) : base(connectionString) { }
+        public ApplicationDBContext(string connectionString) : base(connectionString)
+        { }
     }
 }
