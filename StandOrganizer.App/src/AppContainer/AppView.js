@@ -1,10 +1,11 @@
 import React, {PropTypes, Component} from 'react';
-import {View, StyleSheet, ActivityIndicator} from 'react-native';
+import {View, StyleSheet, ActivityIndicator, StatusBar} from 'react-native';
 import NavigationContainer from '../modules/navigation/NavigationContainer';
 import * as snapshotUtil from '../utils/snapshot';
 import * as SessionStateActions from '../modules/session/SessionState';
 import store from '../redux/store';
 import DeveloperMenu from '../components/DeveloperMenu/DeveloperMenu';
+import { darkenPrimaryColor } from '../config/colorTheme';
 
 class AppView extends Component {
   static displayName = 'AppView';
@@ -42,8 +43,10 @@ class AppView extends Component {
 
     return (
       <View style={{flex: 1}}>
-        <NavigationContainer />
-        {__DEV__ && <DeveloperMenu />}
+         <StatusBar backgroundColor={darkenPrimaryColor} />
+         <NavigationContainer />
+
+         { __DEV__ && <DeveloperMenu /> }
       </View>
     );
   }

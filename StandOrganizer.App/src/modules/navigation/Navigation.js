@@ -1,6 +1,5 @@
 import React, {PropTypes, Component} from 'react';
 import AppRouter from '../AppRouter';
-import TabBar from '../../components/TabBar/TabBar';
 import Drawer from '../../components/Drawer/Drawer';
 import Navbar from '../../components/Navbar/Navbar';
 import { DrawerLayoutAndroid, NavigationExperimental, View, StyleSheet } from 'react-native';
@@ -12,19 +11,14 @@ const {
 } = NavigationExperimental;
 
 class NavigationView extends Component {
-  static displayName = 'NavigationView';
-
-  // NavigationHeader accepts a prop style
-  // NavigationHeader.title accepts a prop textStyle
   renderHeader = (sceneProps) => {
     return (
-      <Navbar title={sceneProps.scene.route.title} />
+      <Navbar title={sceneProps.scene.route.title}
+        leftButtonClick={() => this.drawerRef.openDrawer()}/>
     );
   };
 
   renderScene = (sceneProps) => {
-    // render scene and apply padding to cover
-    // for app bar and navigation bar
     return (
       <View style={styles.sceneContainer}>
         { AppRouter(sceneProps) }
@@ -38,7 +32,8 @@ class NavigationView extends Component {
     const scenes = this.props.navigationState[tabKey];
  
     return (
-       <DrawerLayoutAndroid
+       <DrawerLayoutAndroid 
+          ref={node => this.drawerRef = renodef}
           drawerWidth={300}
           drawerPosition={DrawerLayoutAndroid.positions.Left}
           renderNavigationView={() => <Drawer tabs={tabs} switchTab={this.props.switchTab} />}>
