@@ -33,13 +33,15 @@ const initialState = fromJS({
   tabs: {
     index: 0,
     routes: [
-      {key: 'HomeTab', title: 'HOME'},
+      { key: 'HomeTab', title: 'HOME' },
     ]
   },
   // Scenes for the `HomeTab` tab.
   HomeTab: {
     index: 0,
-    routes: [{key: 'Counter', title: 'Counter Screen'}]
+    routes: [
+      { key: 'Counter', title: 'Counter Screen' }
+    ]
   },
 });
 

@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import {View, StyleSheet, ActivityIndicator} from 'react-native';
-import NavigationContainer from './navigation/NavigationContainer';
+import NavigationContainer from '../modules/navigation/NavigationContainer';
 import * as snapshotUtil from '../utils/snapshot';
 import * as SessionStateActions from '../modules/session/SessionState';
 import store from '../redux/store';

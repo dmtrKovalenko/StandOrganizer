@@ -2,16 +2,14 @@ import React, {PropTypes, Component} from 'react';
 import AppRouter from '../AppRouter';
 import TabBar from '../../components/TabBar/TabBar';
 import Drawer from '../../components/Drawer/Drawer';
-import {DrawerLayoutAndroid, NavigationExperimental, View, StyleSheet} from 'react-native';
+import Navbar from '../../components/Navbar/Navbar';
+import { DrawerLayoutAndroid, NavigationExperimental, View, StyleSheet } from 'react-native';
 
 const {
   CardStack: NavigationCardStack,
   Header: NavigationHeader,
   PropTypes: NavigationPropTypes
 } = NavigationExperimental;
-
-// Customize bottom tab bar height here if desired
-const TAB_BAR_HEIGHT = 50;
 
 class NavigationView extends Component {
   static displayName = 'NavigationView';
@@ -20,16 +18,7 @@ class NavigationView extends Component {
   // NavigationHeader.title accepts a prop textStyle
   renderHeader = (sceneProps) => {
     return (
-      <NavigationHeader
-        {...sceneProps}
-          onNavigateBack={this.props.onNavigateBack}
-          renderTitleComponent={() => {
-            return (
-              <NavigationHeader.Title>
-                {sceneProps.scene.route.title}
-              </NavigationHeader.Title>
-            );
-          }}/>
+      <Navbar title={sceneProps.scene.route.title} />
     );
   };
 

@@ -1,6 +1,6 @@
 import {Provider} from 'react-redux';
 import store from './src/redux/store';
-import AppViewContainer from './src/modules/AppViewContainer';
+import AppViewContainer from './src/AppContainer/AppViewContainer';
 import React, {Component} from 'react';
 import {AppRegistry, BackAndroid} from 'react-native';
 import * as NavigationStateActions from './src/modules/navigation/NavigationReducer';
