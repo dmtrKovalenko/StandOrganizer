@@ -1,5 +1,4 @@
-import color from 'color';
-
+import color from 'color'; 
 
 export const primaryColor = '#00BCD4'
 

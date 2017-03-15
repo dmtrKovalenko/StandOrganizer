@@ -14,14 +14,10 @@ class NavigationView extends Component {
   renderHeader = (sceneProps) => {
     return (
       <Navbar title={sceneProps.scene.route.title}
-        leftButtonPress={this.leftButtonPress}/>
+        sticky
+        leftButtonPress={() => this.drawerRef.openDrawer()}/>
     );
   };
-
-  leftButtonPress = () => {
-    debugger;
-    this.drawerRef.openDrawer()
-  }
 
   renderScene = (sceneProps) => {
     return (

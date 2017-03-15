@@ -72,3 +72,4 @@ fastlane/screenshots
 ios/PepperoniAppTemplate/main.jsbundle
 ios/PepperoniAppTemplate/main.jsbundle.meta
 *.log
+StandOrganizer.App/.vscode/
