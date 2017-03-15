@@ -14,9 +14,14 @@ class NavigationView extends Component {
   renderHeader = (sceneProps) => {
     return (
       <Navbar title={sceneProps.scene.route.title}
-        leftButtonClick={() => this.drawerRef.openDrawer()}/>
+        leftButtonPress={this.leftButtonPress}/>
     );
   };
+
+  leftButtonPress = () => {
+    debugger;
+    this.drawerRef.openDrawer()
+  }
 
   renderScene = (sceneProps) => {
     return (
@@ -33,7 +38,7 @@ class NavigationView extends Component {
  
     return (
        <DrawerLayoutAndroid 
-          ref={node => this.drawerRef = renodef}
+          ref={node => this.drawerRef = node}
           drawerWidth={300}
           drawerPosition={DrawerLayoutAndroid.positions.Left}
           renderNavigationView={() => <Drawer tabs={tabs} switchTab={this.props.switchTab} />}>

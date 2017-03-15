@@ -1,14 +1,16 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons'
+import IconButton from '../Buttons/IconButton'
 import { primaryColor, darkenPrimaryColor } from '../../config/colorTheme'
 import { View, Text, StyleSheet } from 'react-native';
 
 const Navbar = props => {
     return (
         <View style={props.sticky ? styles.container : styles.navbarShadowed}>
-            <View style={styles.leftButtonContainer}
-                onClick={props.leftButtonClick}>
-                <Icon name='menu' size={24} color='white'/>
+            <View style={styles.leftButtonContainer}>
+                <IconButton onPress={props.leftButtonPress}>
+                    <Icon name='menu' size={24} color='white'/>
+                </IconButton>
             </View>
             <Text style={styles.title}>
                 { props.title } 
