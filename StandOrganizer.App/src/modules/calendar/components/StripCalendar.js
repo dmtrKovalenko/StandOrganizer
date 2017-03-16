@@ -63,7 +63,9 @@ const styles = StyleSheet.create({
         color: disabledTextColor
     },
     highlightDateNumberStyle: {
-        color: accentColor, 
+        color: accentColor,
+        width: 25,
+        textAlign: 'center',
         borderBottomWidth: 2, 
         borderColor: accentColor
     },
