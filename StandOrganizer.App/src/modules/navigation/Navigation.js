@@ -12,9 +12,10 @@ const {
 
 class NavigationView extends Component {
   renderHeader = (sceneProps) => {
+    const title = this.props.navigationState.dynamicTitle || sceneProps.scene.route.title;
+    
     return (
-      <Navbar title={this.props.navigationState.dynamicTitle || sceneProps.scene.route.title}
-        sticky
+      <Navbar title={title} sticky
         leftButtonPress={() => this.drawerRef.openDrawer()}/>
     );
   };

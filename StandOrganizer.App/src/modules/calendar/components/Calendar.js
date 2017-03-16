@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
-import StripCalendar from './components/StripCalendar';
-import {View} from 'react-native';
+import DayTimeline from './DayTimeline/TimeLineListView';
+import StripCalendar from './StripCalendar/StripCalendar';
+import { View } from 'react-native';
 
 class Calendar extends Component {
     render() {
         return (
             <View>
                 <StripCalendar onWeekChanged={this.props.updateDynamicTitle}/>
+                <DayTimeline />
             </View>
         );
     }

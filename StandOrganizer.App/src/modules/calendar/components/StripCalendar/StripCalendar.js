@@ -1,10 +1,10 @@
 import React from 'react';
-import CalendarStrip from 'react-native-calendar-strip';
-import ArrowLeft from '../../../assets/arrow_left_24dp.png';
-import ArrowRight from '../../../assets/arrow_right_24dp.png';
 import moment from 'moment'
+import ArrowLeft from '../../../../assets/arrow_left_24dp.png';
+import ArrowRight from '../../../../assets/arrow_right_24dp.png';
+import CalendarStrip from 'react-native-calendar-strip';
 import { StyleSheet } from 'react-native'
-import { primaryColor, accentColor, disabledTextColor } from '../../../config/colorTheme';
+import { primaryColor, accentColor, disabledTextColor } from '../../../../config/colorTheme';
 
 const getWeeksMonth = (date) => {
     const month = date.month();
@@ -47,7 +47,8 @@ const StripCalendar = props => {
 
 const styles = StyleSheet.create({
     calendarStyle: {
-        elevation: 5
+        elevation: 5,
+        height: 50
     },
     headerStyle : { //hide header
         width: 0,
