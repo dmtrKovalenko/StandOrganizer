@@ -1,22 +1,14 @@
 {
-  "name": "PepperoniAppTemplate",
-  "author": "Futurice",
-  "description": "React Native App Starter Kit for Android and iOS",
+  "name": "StandOrginizerNative",
+  "author": "Dmitriy Kovalenko",
+  "description": "Stand orginizer application.",
   "license": "MIT",
-  "homepage": "http://getpepperoni.com",
-  "bugs": "https://github.com/futurice/pepperoni-app-kit/issues",
+  "bugs": "https://github.com/dmtrKovalenko/StandOrganizer/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/futurice/pepperoni-app-kit"
   },
-  "keywords": [
-    "React Native",
-    "Starter Kit",
-    "Bitrise",
-    "Redux",
-    "Auth0"
-  ],
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": false,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
