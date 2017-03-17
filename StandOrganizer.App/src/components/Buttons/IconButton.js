@@ -1,6 +1,6 @@
 import React from 'react';
-import { lightenPrimaryColor } from '../../config/colorTheme';
-import { TouchableNativeFeedback, View, StyleSheet } from 'react-native'
+import {lightenPrimaryColor} from '../../config/colorTheme';
+import {TouchableNativeFeedback, View, StyleSheet} from 'react-native';
 
 const IconButton = props => (
     <View style={props.style}>
@@ -9,17 +9,17 @@ const IconButton = props => (
             <View style={styles.iconContainer}>
                 {props.children}
             </View>
-        </TouchableNativeFeedback> 
+        </TouchableNativeFeedback>
     </View>
 );
 
 const styles = StyleSheet.create({
-     iconContainer: {
-        width: 30, 
-        height: 30, 
-        justifyContent: 'center', 
-        alignItems: 'center'
-    }
-})
+  iconContainer: {
+    width: 30,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+});
 
 export default IconButton;

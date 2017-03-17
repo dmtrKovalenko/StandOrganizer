@@ -1,15 +1,15 @@
-import { connect } from 'react-redux';
-import { selectDate } from './CalendarActions';
-import { updateDynamicTitle } from '../navigation/NavigationReducer'
+import {connect} from 'react-redux';
+import {selectDate} from './CalendarActions';
+import {updateDynamicTitle} from '../navigation/NavigationReducer';
 import Calendar from './components/Calendar';
 
 const mapDispatchToProps = {
-   updateDynamicTitle,
-   selectDate
-}
+  updateDynamicTitle,
+  selectDate
+};
 
-const mapStateToProps = (state) =>  ({
-    calendarState: state.get('calendar')
-})
+const mapStateToProps = (state) => ({
+  calendarState: state.get('calendar').toJS()
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Calendar)
+export default connect(mapStateToProps, mapDispatchToProps)(Calendar);

@@ -8,7 +8,7 @@ const {StateUtils: NavigationStateUtils} = NavigationExperimental;
 const PUSH_ROUTE = 'NavigationState/PUSH_ROUTE';
 const POP_ROUTE = 'NavigationState/POP_ROUTE';
 const SWITCH_TAB = 'NavigationState/SWITCH_TAB';
-const UPDATE_TITLE ='UPDATE_TITLE';
+const UPDATE_TITLE = 'UPDATE_TITLE';
 
 export function switchTab(key) {
   return {
@@ -29,7 +29,7 @@ export function updateDynamicTitle(title) {
   return {
     type: UPDATE_TITLE,
     payload: title
-  }
+  };
 }
 
 export function popRoute() {
@@ -41,14 +41,14 @@ const initialState = fromJS({
   tabs: {
     index: 0,
     routes: [
-      { key: 'HomeTab', title: 'HOME' },
+      {key: 'HomeTab', title: 'HOME'}
     ]
   },
   // Scenes for the `HomeTab` tab.
   HomeTab: {
     index: 0,
     routes: [
-      { key: 'Counter', title: 'Counter Screen' }
+      {key: 'Counter', title: 'Counter Screen'}
     ]
   },
   dynamicTitle: null
@@ -109,7 +109,7 @@ export default function NavigationReducer(state = initialState, action) {
     }
 
     case UPDATE_TITLE: {
-       return state.set('dynamicTitle', action.payload)
+      return state.set('dynamicTitle', action.payload);
     }
 
     default:

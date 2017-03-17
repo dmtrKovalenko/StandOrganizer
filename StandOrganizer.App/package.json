@@ -23,7 +23,7 @@
     "bundle:ios": "node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --entry-file index.ios.js --bundle-output ios/PepperoniAppTemplate/main.jsbundle --dev=false --verbose",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint src test",
+    "lint": "eslint --fix src test",
     "coverage": "rimraf coverage && jest --coverage",
     "version": "support/version-ios.sh"
   },
@@ -41,6 +41,7 @@
     "react-dom": "~15.4.2",
     "react-native": "0.42.0",
     "react-native-calendar-strip": "^0.1.3",
+    "react-native-hr": "^1.1.3",
     "react-native-vector-icons": "^4.0.0",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0",

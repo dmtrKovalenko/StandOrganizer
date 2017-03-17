@@ -5,7 +5,7 @@ import * as snapshotUtil from '../utils/snapshot';
 import * as SessionStateActions from '../modules/session/SessionState';
 import store from '../redux/store';
 import DeveloperMenu from '../components/DeveloperMenu/DeveloperMenu';
-import { darkenPrimaryColor } from '../config/colorTheme';
+import {darkenPrimaryColor} from '../config/colorTheme';
 
 class AppView extends Component {
   static displayName = 'AppView';
