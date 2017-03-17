@@ -5,7 +5,11 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandOrganizer.Api", "StandOrganizer.Api\StandOrganizer.Api.csproj", "{B9298A22-3BC8-44A0-9FFA-F9DB00743C3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandOrganizer.Api.Tests", "StandOrganizer.Api.Tests\StandOrganizer.Api.Tests.csproj", "{633E454C-8B5A-4926-B7D4-8961DEBF8799}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandOrganizer.BL", "StandOrginizer.BL\StandOrganizer.BL.csproj", "{C08D3056-91F2-4FED-B67D-42DF87E8F0E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandOrganizer.DAL", "StandOrganizer.DAL\StandOrganizer.DAL.csproj", "{52F370C3-C614-407A-9D1B-EB492DC3C6D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandOrganizer.Tests", "StandOrganizer.Tests\StandOrganizer.Tests.csproj", "{633E454C-8B5A-4926-B7D4-8961DEBF8799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +21,14 @@ Global
 		{B9298A22-3BC8-44A0-9FFA-F9DB00743C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9298A22-3BC8-44A0-9FFA-F9DB00743C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9298A22-3BC8-44A0-9FFA-F9DB00743C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08D3056-91F2-4FED-B67D-42DF87E8F0E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08D3056-91F2-4FED-B67D-42DF87E8F0E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08D3056-91F2-4FED-B67D-42DF87E8F0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08D3056-91F2-4FED-B67D-42DF87E8F0E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F370C3-C614-407A-9D1B-EB492DC3C6D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F370C3-C614-407A-9D1B-EB492DC3C6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F370C3-C614-407A-9D1B-EB492DC3C6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F370C3-C614-407A-9D1B-EB492DC3C6D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{633E454C-8B5A-4926-B7D4-8961DEBF8799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{633E454C-8B5A-4926-B7D4-8961DEBF8799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{633E454C-8B5A-4926-B7D4-8961DEBF8799}.Release|Any CPU.ActiveCfg = Release|Any CPU
