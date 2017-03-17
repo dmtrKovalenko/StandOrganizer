@@ -6,7 +6,7 @@ import {View} from 'react-native';
 class Calendar extends Component {
   shouldComponentUpdate(nextProps) {
     return (
-      this.props.calendarState.selectedDate !== nextProps.calendarState.selectedDate );
+      this.props.calendarState.selectedDate !== nextProps.calendarState.selectedDate);
   }
 
   render() {

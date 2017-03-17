@@ -2,7 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import Drawer from '../../components/Drawer/Drawer';
 import Navbar from '../../components/Navbar/Navbar';
 import AppRouter from '../AppRouter';
-import { DrawerLayoutAndroid, NavigationExperimental, View, StyleSheet } from 'react-native';
+import {DrawerLayoutAndroid, NavigationExperimental, View, StyleSheet} from 'react-native';
 
 const {
   CardStack: NavigationCardStack,
