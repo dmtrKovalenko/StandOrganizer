@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StandOrginizer.BL.ViewModels
 {
     public class ServiceViewModel
     {
-        public int Id { get; set; }
+        public DateTimeOffset StartDate { get; set; }
+
+        public DateTimeOffset EndDate { get; set; }
+
+        public PublisherViewModel Publisher { get; set; }
+
+        public PublisherViewModel Assistant { get; set; }
     }
 }

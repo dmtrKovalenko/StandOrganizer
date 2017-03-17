@@ -53,6 +53,10 @@
     <Compile Include="Migrations\201703112042235_Initial.Designer.cs">
       <DependentUpon>201703112042235_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703130831368_Service Entity.cs" />
+    <Compile Include="Migrations\201703130831368_Service Entity.Designer.cs">
+      <DependentUpon>201703130831368_Service Entity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Service.cs" />
@@ -70,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703112042235_Initial.resx">
       <DependentUpon>201703112042235_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703130831368_Service Entity.resx">
+      <DependentUpon>201703130831368_Service Entity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,4 @@
 ﻿using Ninject.Modules;
-using StandOrganizer.DAL.Models;
-using StandOrganizer.DAL.Repository;
 using StandOrganizer.DAL.UnitOfWork;
 
 namespace NLayerApp.BLL.Infrastructure

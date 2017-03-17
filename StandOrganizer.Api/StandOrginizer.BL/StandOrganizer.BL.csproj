@@ -45,8 +45,12 @@
   <ItemGroup>
     <Compile Include="Infrastructure\ServiceModule.cs" />
     <Compile Include="Interfaces\IServiceManager.cs" />
+    <Compile Include="Interfaces\IStandManager.cs" />
     <Compile Include="Services\ServiceManager.cs" />
+    <Compile Include="Services\StandManager.cs" />
+    <Compile Include="ViewModels\PublisherViewModel.cs" />
     <Compile Include="ViewModels\ServiceViewModel.cs" />
+    <Compile Include="ViewModels\StandViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
