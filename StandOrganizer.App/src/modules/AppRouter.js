@@ -1,7 +1,7 @@
 /*eslint-disable react/prop-types*/
 
 import React from 'react';
-import CounterContainer from './counter/CounterContainer';
+//import CounterContainer from './counter/CounterContainer';
 import CalendarConatiner from './calendar/CalendarContainer';
 
 /**
