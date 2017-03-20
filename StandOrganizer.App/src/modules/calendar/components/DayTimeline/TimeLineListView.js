@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import TimeLineRow from './TimeLineRow';
-import moment from 'moment';
 import ServiceOverlay from './ServiceOverlay';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 
 const getInitialDataSource = () => {
   return [8,9,10,11,12,13,14,15,16,17,18,19,20];
@@ -18,35 +17,30 @@ class TimeLineListView extends Component {
 
     return dataSource.map(rowData => {
       return (
-        <View>
-            <TimeLineRow key={Math.random()} time={rowData} />
-            <View key={Math.random()} style={{height: 1, backgroundColor: '#CCCCCC'}}/>
+        <View key={Math.random()}>
+            <TimeLineRow time={rowData} />
         </View>
       );
     });
   }
 
   renderServices = (services) => {
-    return services.map(service => <ServiceOverlay service={service} />);
+    return services.map(service => <ServiceOverlay key={Math.random()} service={service} />);
   }
 
   render() {
-    const date = moment(this.props.date).format('dddd MMMM, Do');
-
     return (
-        <View style={styles.container}>
-            <ScrollView style={styles.listView}>
-                  <Text style={styles.title}> {date} </Text>
+      <View style={styles.container}>
+        <ScrollView style={styles.listView}>
+            <View style={styles.timeLineItems}>
+              { this.renderTimeLine() }
+            </View>
 
-                  <View style={styles.timeLineItems}>
-                    { this.renderTimeLine() }
-                  </View>
-
-                  <View style={styles.fixed}>
-                    {this.renderServices(this.props.services)}
-                </View>
-            </ScrollView>
-        </View>
+            <View style={styles.fixed}>
+              { this.renderServices(this.props.services) }
+          </View>
+        </ScrollView>
+      </View>
     );
   }
 }
@@ -54,13 +48,12 @@ class TimeLineListView extends Component {
 const styles = StyleSheet.create({
   container: {
     position: 'relative'
-
   },
   listView: {
-
+    paddingHorizontal: 15
   },
   timeLineItems: {
-    marginTop: 40
+
   },
   title: {
     marginTop: 5,

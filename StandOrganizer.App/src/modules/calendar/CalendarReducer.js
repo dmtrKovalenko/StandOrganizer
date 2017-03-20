@@ -13,7 +13,9 @@ const reducer = handleActions({
     //and allow errors, serilizing moment object to JSON
   selectedDate: moment().format(),
   services: [
-    new Service(1, new Date('March 17, 2017 14:00:00'), new Date('March 17, 2017 16:00:00'), 'Софья', 'Дарья')
+    new Service(3, new Date('March 17, 2017 11:00:00'), new Date('March 17, 2017 12:00:00'), 'Софья Григорьева', 'Дарья Зинченко'),
+    new Service(1, new Date('March 17, 2017 09:00:00'), new Date('March 17, 2017 11:00:00'), 'Вера Колованова', 'Таня Хомутова'),
+    new Service(4, new Date('March 17, 2017 12:30:00'), new Date('March 17, 2017 14:00:00'), 'Лысенко Игорь', 'Клищенко Анна')
   ]
 }));
 
