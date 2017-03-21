@@ -15,6 +15,8 @@ export const disabledTextColor = 'rgba(0, 0, 0, 0.34)';
 
 export const defaultRippleColor = TouchableNativeFeedback.Ripple('rgba(0, 0, 0, 0.11)', true);
 
+export const defaultRippleColorRGBA = 'rgba(0, 0, 0, 0.11)'
+
 export const additionalColors = [
   '#80deea',
   '#80cbc4',

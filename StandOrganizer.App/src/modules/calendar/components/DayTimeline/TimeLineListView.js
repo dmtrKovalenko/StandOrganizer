@@ -8,8 +8,24 @@ const getInitialDataSource = () => {
 };
 
 class TimeLineListView extends Component {
-  shouldComponentUpdate(nextProps) {
-    return this.props.date !== nextProps.date;
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeTime : null,
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.date !== nextProps.date || this.state !== nextState;
+  }
+
+  handleRowTap = (time) => {
+    if (this.state.activeTime == time) {
+      this.props.openServiceModal();
+    } else {
+      this.setState({activeTime: time})
+    }
   }
 
   renderTimeLine = () => {
@@ -17,11 +33,11 @@ class TimeLineListView extends Component {
 
     return dataSource.map(rowData => {
       return (
-        <View key={Math.random()}>
-            <TimeLineRow time={rowData} />
-        </View>
-      );
-    });
+        <TimeLineRow time={rowData} 
+          isActive={rowData == this.state.activeTime}
+          key={Math.random()} 
+          onPress={this.handleRowTap}/>)
+    })
   }
 
   renderServices = (services) => {
