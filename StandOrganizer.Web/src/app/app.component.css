@@ -1,0 +1,55 @@
+.toolbar {
+    display: flex;
+    height: 64px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background-color: #00bcd4;
+    transition: all .3s cubic-bezier(.65,.05,.36,1);
+    padding: 10px 10px 0px 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.156863), 0 3px 10px rgba(0,0,0,.227451);
+    width: 100%;
+}
+
+.toolbar > .title {
+    color: #fff;
+    font-size: 24px;
+    line-height: 0;
+    text-align: left;
+}
+
+.about {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.red {
+    color: #ff4081;
+}
+
+.telephone {
+    margin: 5px auto 20px;
+    text-align: center;
+    display: block;
+    width: 200px;
+    font-size: 20px;
+    color: #ff4081;
+}
+@media(min-width: 767px) {
+    .toolbar > .title,
+    .app-container {
+      max-width: 968px;
+      margin: 0 auto;
+    }
+
+    .toolbar > .title {
+        width: 968px;
+        line-height: 1.8;
+    }
+}

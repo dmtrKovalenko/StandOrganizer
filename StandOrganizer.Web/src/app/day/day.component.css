@@ -1,0 +1,27 @@
+.cal-day-view .cal-event.cal-ends-within-day {
+    border-radius: 2px;
+    height: calc(100% - 3px);
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cal-day-view .cal-event-container {
+    position: absolute;
+    width: 80% !important;
+}
+
+.cal-event-title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cal-day-view .cal-hour:nth-child(odd) {
+    background-color: rgba(224, 224, 224, 0.5);
+}
+
+.cal-day-view .cal-hour:not(:last-child) .cal-hour-segment, .cal-day-view .cal-hour:last-child :not(:last-child) .cal-hour-segment {
+    border: none;
+}

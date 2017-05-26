@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/angular-calendar/dist/css/angular-calendar.css';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box !important;
+}
+
+body {
+    margin-top: 80px;
+}
+
+@media (max-width: 968px) {
+    body {
+        margin: 80px 0 0;
+    }
+}
+
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+<div class="calendar-container">
+  <!-- Controls toolbar -->
+  <md-toolbar color="primary">
+    <button 
+      md-button
+      mwlCalendarPreviousView
+      [view]="'month'"
+      [(viewDate)]="viewDate"
+      >
+      <i class="material-icons">keyboard_arrow_left</i>
+    </button>
+
+    <span class="fill-remaining-space">
+       {{ viewDate | calendarDate:('monthViewTitle'):'ru' }}
+    </span>
+
+    <button 
+      md-button
+      mwlCalendarNextView
+      [view]="'month'"
+      [(viewDate)]="viewDate"
+      >
+      <i class="material-icons">keyboard_arrow_right</i>
+    </button>
+  </md-toolbar>
+  
+  <!-- Calendar body -->
+  <mwl-calendar-month-view
+    [viewDate]="viewDate"
+    [locale]="locale" 
+    [weekStartsOn]="1"
+    [events]="events"
+    (dayClicked)="dayClicked($event.day)"
+  > 
+  </mwl-calendar-month-view>
+
+ 
+</div>

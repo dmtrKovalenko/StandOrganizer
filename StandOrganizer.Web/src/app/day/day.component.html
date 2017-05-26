@@ -1,0 +1,32 @@
+  <md-toolbar color="primary">
+    <button 
+      md-button
+      mwlCalendarPreviousView
+      [view]="'day'"
+      [(viewDate)]="viewDate"
+      >
+      <i class="material-icons">keyboard_arrow_left</i>
+    </button>
+
+    <span class="fill-remaining-space">
+       {{ viewDate | calendarDate:('dayViewTitle'):'ru' }}
+    </span>
+
+    <button 
+      md-button
+      mwlCalendarNextView
+      [view]="'day'"
+      [(viewDate)]="viewDate"
+      >
+      <i class="material-icons">keyboard_arrow_right</i>
+    </button>
+  </md-toolbar>
+
+ <mwl-calendar-day-view
+    [dayEndHour]="20"
+    [dayStartHour]="8"
+    [locale]="locale"
+    [events]="events"
+    [viewDate]="viewDate"
+  >
+  </mwl-calendar-day-view>
